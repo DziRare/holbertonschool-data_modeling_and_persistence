@@ -1,5 +1,5 @@
-SELECT authors.name, books.title
+SELECT authors.name AS author_name, books.title AS title
 FROM authors
-LEFT JOIN books ON books.author_id=authors.id
-ORDER BY books.title ASC
+LEFT JOIN books ON authors.id = books.author_id
+ORDER BY authors.name AND books.title ASC
 ;
