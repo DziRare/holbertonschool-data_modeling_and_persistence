@@ -4,4 +4,5 @@ FROM instructors
 WHERE id IN
     (SELECT instructor_id
     FROM courses
-    INNER JOIN registrations ON registrations.course_id = courses.id);
+    INNER JOIN registrations ON registrations.course_id = courses.id)
+ORDER BY instructor_name ASC;

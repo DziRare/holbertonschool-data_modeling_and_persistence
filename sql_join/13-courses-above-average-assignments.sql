@@ -15,4 +15,5 @@ WHERE number_of_registrations > (
         LEFT JOIN assignments ON courses.id = assignments.course_id
         GROUP BY courses.id
     ) AS avg_counts
-);
+)
+ORDER BY course_title ASC;
